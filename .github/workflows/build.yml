@@ -20,8 +20,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build macOS app
-        run: npm run dist-mac
+      - name: Verify install
+        run: ls -la
+
+      - name: Build macOS app (verbose)
+        run: npx electron-builder --mac --verbose
+
+      - name: Show dist contents
+        run: ls -R dist || echo "no dist folder"
 
       - name: Upload .app
         uses: actions/upload-artifact@v4
