@@ -1,0 +1,22 @@
+{
+  "name": "proxy-browser",
+  "version": "1.0.0",
+  "description": "Simple macOS browser wrapper with proxy support",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist-mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.daniel.proxybrowser",
+    "productName": "ProxyBrowser",
+    "mac": {
+      "target": "dir",
+      "category": "public.app-category.utilities"
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
